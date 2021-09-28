@@ -1,0 +1,22 @@
+.awards-section {
+  padding: var(--section-padding);
+}
+
+.awards__title {
+  font-size: var(--section-title);
+  text-align: center;
+}
+
+.awards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.award-item__img {
+  margin: 0 auto 1rem;
+}
+
+.award-item__desc {
+  font-size: 1.2rem;
+}
