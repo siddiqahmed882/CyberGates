@@ -1,0 +1,33 @@
+.subscription {
+    padding: 20px;
+    width: 50%;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    /* border-radius: 200px; */
+}
+
+table {
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+th,
+td {
+    padding: 12px 10px;
+}
+
+.fa-check-circle {
+    color: rgb(117, 184, 18);
+    font-size: 1.5rem;
+}
+
+.fa-times-circle {
+    color: red;
+    font-size: 1.5rem;
+}
