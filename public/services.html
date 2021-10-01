@@ -44,133 +44,24 @@
         <section class="services__info">
           <h3 class="heading">ENTERPRISE SERVICES</h3>
           <p class="lead">Services for organizations with the highest security and compliance demands.</p>
-          <div class="services">
-            <!-- 1 -->
-            <div class="service">
-              <h4 class="service__title">Network Penetration Testing</h4>
-              <div class="service__img"><i class="fas fa-terminal"></i></div>
-              <p class="service__desc">
-                A method that evaluates the security of a network system by conducting an analysis and subsequent
-                examination of potential gaps or "holes" within security operations, flaws within hardware or software
-                configuration or other operational weaknesses that may exist. Once completed these tests expose security
-                vulnerabilities, assess the impact should a potential security threat occur and follow with a proposal
-                of a technical solution. The outcome of these tests allows businesses to make sound security decisions
-                under certain circumstances such as setting up a new office, deployment of a new network infrastructure
-                or upgrading existing or new applications.
-              </p>
-            </div>
-            <!-- 2 -->
-            <div class="service">
-              <h4 class="service__title">Network Vulnerability Assessment</h4>
-              <div class="service__img"><i class="fas fa-chart-pie"></i></div>
-              <p class="service__desc">
-                Vulnerability Assessment (VA) is the process of measuring and prioritizing risks associated with network
-                and host-based systems to allow rational planning of technologies and activities that manage business
-                risk. Vulnerability Assessment (VA) tools allow customization of security policy, automated analysis of
-                vulnerabilities, and creation of reports that effectively communicate security vulnerability discoveries
-                and detailed corrective actions to all levels of an organization. Vulnerability Assessment involves
-                design, development and review of security policies, procedures, and standards, and validation of the
-                state of security of the information technology infrastructure.
-              </p>
-            </div>
-            <!-- 3 -->
-            <div class="service">
-              <h4 class="service__title">Web Application Penetration Testing</h4>
-              <div class="service__img"><i class="fas fa-code"></i></div>
-              <p class="service__desc">
-                Unlike a network penetration test, a web application penetration test focuses on the security and
-                potential risks present with a web application. Using methods attackers use to infiltrate web
-                applications to obtain financial, personal and even medical information, these tests allow programmers
-                to assess weaknesses in both server and client-side applications.
-              </p>
-            </div>
-            <!-- 4 -->
-            <div class="service">
-              <h4 class="service__title">Source Code Auditing</h4>
-              <div class="service__img"><i class="fas fa-bug"></i></div>
-              <p class="service__desc">
-                The scope of this audit is to manually review the source code of software or firmware to identify
-                weaknesses and backdoors. In addition to the analysis of developed software, we can also check
-                integrated open source components or standard libraries used by the software in question. CYBER GATES
-                performs source code reviews for all common programming languages.
-              </p>
-            </div>
-            <!-- 5 -->
-            <div class="service">
-              <h4 class="service__title">Advanced DDOS Protecttion</h4>
-              <div class="service__img"><i class="fas fa-globe"></i></div>
-              <p class="service__desc">
-                Distributed Denial of Service (DDoS) attacks are ever-evolving and use a variety of technologies. To
-                successfully combat these attacks, you need a dynamic, multi-layered security solution. CYBER GATES DDoS
-                solution protects from both known and zero day attacks with very low latency. It’s easy to deploy and
-                manage, and includes comprehensive reporting and analysis tools.
-              </p>
-            </div>
-            <!-- 6 -->
-            <div class="service">
-              <h4 class="service__title">Virtual Private Network</h4>
-              <div class="service__img"><i class="fas fa-user-secret"></i></div>
-              <p class="service__desc">
-                CYBER GATES VPN service, secures your internet connection with military grade AES256 encryption to
-                guarantee that all of the data you're sending and receiving is strongly encrypted and secured from
-                prying eyes. We have employed world’s leading encryption standard AES‑256 to secure your personal and
-                financial information so that it stays out of the hands of identity and data thieves.
-              </p>
-            </div>
-            <!-- 7 -->
-            <div class="service">
-              <h4 class="service__title">Computer Forensic</h4>
-              <div class="service__img"><i class="fas fa-gavel"></i></div>
-              <p class="service__desc">
-                We offer a full range of digital forensic services, from first response, full forensic analysis, through
-                to reporting and providing expert evidence in court. CYBER GATES company uses best practices for
-                identification, collection, acquisition, and preservation of digital evidence that meets "ISO/IEC
-                27037:2012" standard requirements. Relationship with clients are Private & Confidential and the
-                informations are kept securely.
-              </p>
-            </div>
-            <!-- 8 -->
-            <div class="service">
-              <h4 class="service__title">General Security Consultancy</h4>
-              <div class="service__img"><i class="fa fa-bullhorn"></i></div>
-              <p class="service__desc">
-                From DDoS attacks and malware threats to service fraud, your network operations, multimedia services and
-                data are always at risk. Our experts can help you keep sensitive data, mission-critical services and
-                network infrastructures safe with a holistic approach to security. Sophisticated threats and
-                vulnerabilities will always pose a constant challenge.
-              </p>
-            </div>
-            <!-- 9 -->
-            <div class="service">
-              <h4 class="service__title">Training</h4>
-              <div class="service__img"><i class="fas fa-graduation-cap"></i></div>
-              <p class="service__desc">
-                A wide range of courses for users of all ICT-supplied systems are offered by the CYBER GATES training
-                and education center. Courses are designed to be progressive and complementary, enabling participants to
-                advance smoothly after completing each level. The training and education center offers a standard
-                timetable, but courses may be arranged on demand in order to suit customers' schedules.
-              </p>
-            </div>
-            <!-- 10 -->
-            <div class="service">
-              <h4 class="service__title">Support</h4>
-              <div class="service__img"><i class="far fa-life-ring"></i></div>
-              <p class="service__desc">
-                The CYBER GATES Support team is dedicated to providing quality service offerings that consistently meet
-                or exceed our customers' expectations. We work in partnership and hold the highest level accreditations
-                with a wide range of leading Security vendors worldwide so that you can be sure our Support Team
-                maintains the knowledge and level of expertise that enables them to fully support your organisations'
-                business critical security systems.
-              </p>
-            </div>
-          </div>
+          <div class="services"></div>
         </section>
       </div>
     </div>
   </main>
   <!-- Footer -->
   <custom-footer></custom-footer>
+
+  <!-- Templates -->
+  <template data-service-template>
+    <div class="service">
+      <h4 class="service__title"><a></a></h4>
+      <div class="service__img"></div>
+      <p class="service__desc"></p>
+    </div>
+  </template>
 </body>
-<script src="./js/components.js"></script>
+<script src="./js/services.js" type="module"></script>
+<script src="./js/components.js" type="module"></script>
 
 </html>
