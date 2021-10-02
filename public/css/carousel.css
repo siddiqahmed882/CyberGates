@@ -1,126 +1,116 @@
-/* img {
-    width: 100%;
-    min-height: 100px;
-}
-
-h2 {
-    text-align: center;
-    font-size: var(--section-title);
-} */
-
 .testimonial-section {
-    padding: var(--section-padding);
-    background: #333 url(../assets/index/img2.jpg) no-repeat center center / cover;
-    background-blend-mode: overlay;
+  padding: var(--section-padding);
+  background: #333 url(../assets/index/img2.jpg) no-repeat center center / cover;
+  background-blend-mode: overlay;
 }
 
 .testimonial__title {
-    font-size: var(--section-title);
-    margin-bottom: 1.5rem;
+  font-size: var(--section-title);
+  margin-bottom: 1.5rem;
 }
 
 .testimonial {
-    width: min(70vw, 600px);
-    min-height: 400px !important;
-    margin: 0 auto;
-    /* background: red; */
+  width: min(70vw, 600px);
+  min-height: 400px !important;
+  margin: 0 auto;
+  /* background: red; */
 }
 
 .card .rightCard img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
 }
 
 .card h2 {
-    text-align: center;
-    color: white;
-    padding: 2rem;
-    font-size: var(--section-title);
-    grid-column: 1/-1;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  font-size: var(--section-title);
+  grid-column: 1/-1;
 }
 
 .card {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .leftCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .leftCard p {
-    color: white;
-    font-size: 1.3rem;
-    text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .card .leftCard img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
 }
 
 .leftCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .leftCard p {
-    color: white;
-    font-size: 1.3rem;
-    text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .leftCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .leftCard p {
-    color: white;
-    font-size: 1.3rem;
-    text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .leftCard h3 {
-    font-size: 2rem;
-    margin-top: 8px;
-    color: rgb(255, 157, 0);
+  font-size: 2rem;
+  margin-top: 8px;
+  color: rgb(255, 157, 0);
 }
 
 .card .rightCard img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
 }
 
 .rightCard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .rightCard p {
-    color: white;
-    font-size: 1.3rem;
-    text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .rightCard h3 {
-    font-size: 2rem;
-    margin-top: 8px;
-    color: rgb(255, 157, 0);
+  font-size: 2rem;
+  margin-top: 8px;
+  color: rgb(255, 157, 0);
 }

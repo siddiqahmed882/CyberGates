@@ -119,9 +119,13 @@
 
 .nav__item:hover,
 .nav__item:focus,
-.nav__item.active {
+.nav__item .active {
   opacity: 1;
   color: var(--clr-primary-500);
+}
+
+.nav__link.active:hover {
+  color: var(--clr-primary-700);
 }
 
 .dropdown__container {

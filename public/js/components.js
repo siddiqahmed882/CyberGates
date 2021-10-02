@@ -1,4 +1,5 @@
 /* Navbar Component */
+const currPage = document.body.id;
 
 const navbarTemplate = document.createElement('template');
 navbarTemplate.innerHTML = `
@@ -12,19 +13,67 @@ navbarTemplate.innerHTML = `
         <img src="./assets/logo.png" alt="Cyber Gates">
       </a>
       <ul class="nav__items">
-        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item">
+          <a 
+            href=${currPage === 'home' ? '#' : 'index.html'}
+            class="nav__link"
+            data-id="home"
+          >Home</a>
+        </li>
+        <li class="nav__item">
+        <a 
+          href=${currPage === 'about' ? '#' : 'about.html'}
+          class="nav__link"
+          data-id="about"
+          >About</a>
+        </li>
         <li class="nav__item dropdown__container" aria-expanded="false">
           <span>Services <i class="fas fa-chevron-down"></i> </span>
           <ul class="dropdown__menu" aria-hidden="true">
-            <li class="nav__item"><a href="#" class="nav__link">Services Overview</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Web Security & Hosting Plans</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Web Security</a></li>
+            <li class="nav__item">
+              <a 
+                href=${currPage === 'services' ? '#' : 'services.html'} 
+                class="nav__link"
+                data-id="services"
+                >Services Overview</a>
+            </li>
+            <li class="nav__item">
+              <a 
+                href=${currPage === 'services-for-smes' ? '#' : 'servicesforsmes.html'} 
+                class="nav__link"
+                data-id="services-for-smes"
+                >Web Security & Hosting Plans</a>
+            </li>
+            <li class="nav__item">
+              <a 
+                href=${currPage === 'web-security' ? '#' : 'websecurity.html'} 
+                class="nav__link"
+                data-id = "services-for-smes"
+                >Web Security</a>
+            </li>
           </ul>
         </li>
-        <li class="nav__item"><a href="#" class="nav__link">News</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Customers</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+        <li class="nav__item">
+          <a 
+            href=${currPage === 'news' ? '#' : 'news.html'} 
+            class="nav__link"
+            data-id='news'
+            >News</a>
+          </li>
+        <li class="nav__item">
+          <a 
+            href=${currPage === 'customers' ? '#' : 'customers.html'} 
+            class="nav__link"
+            data-id='customers'
+            >Customers</a>
+        </li>
+        <li class="nav__item">
+          <a 
+          href=${currPage === 'contacts' ? '#' : 'contacts.html'} 
+          class="nav__link"
+          data-id='contacts'
+          >Contacts</a>
+        </li>
       </ul>
       <button class="hamburger" id="hamburger">
         <span class="inner"></span>
@@ -41,6 +90,9 @@ class Navbar extends HTMLElement {
   }
 
   connectedCallback() {
+    // adding active class
+    this.shadowRoot.querySelector(`[data-id = ${currPage}]`).classList.add('active');
+
     const hamburger = this.shadowRoot.getElementById('hamburger');
     const navItems = this.shadowRoot.querySelector('.nav__items');
     const dropdown = this.shadowRoot.querySelector('.dropdown__container');
