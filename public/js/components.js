@@ -1,3 +1,83 @@
+/* Navbar Component */
+
+const navbarTemplate = document.createElement('template');
+navbarTemplate.innerHTML = `
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <header class="header">
+    <nav class="navbar">
+      <a href="./index.html" class="logo">
+        <img src="./assets/logo.png" alt="Cyber Gates">
+      </a>
+      <ul class="nav__items">
+        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item dropdown__container" aria-expanded="false">
+          <span>Services <i class="fas fa-chevron-down"></i> </span>
+          <ul class="dropdown__menu" aria-hidden="true">
+            <li class="nav__item"><a href="#" class="nav__link">Services Overview</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Web Security & Hosting Plans</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Web Security</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="#" class="nav__link">News</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Customers</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span class="inner"></span>
+      </button>
+    </nav>
+  </header>
+`;
+
+class Navbar extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
+  }
+
+  connectedCallback() {
+    const hamburger = this.shadowRoot.getElementById('hamburger');
+    const navItems = this.shadowRoot.querySelector('.nav__items');
+    const dropdown = this.shadowRoot.querySelector('.dropdown__container');
+    const dropdownList = this.shadowRoot.querySelector('.dropdown__menu');
+
+    hamburger.addEventListener('click', () => {
+      if (hamburger.classList.contains('menu-active')) {
+        hamburger.classList.remove('menu-active');
+        navItems.style.animation = 'slideout 200ms ease forwards';
+      } else {
+        hamburger.classList.add('menu-active');
+        navItems.style.animation = 'slidein 200ms ease forwards';
+      }
+    });
+
+    dropdown.addEventListener('click', () => {
+      if (dropdown.getAttribute('aria-expanded') === 'false') {
+        dropdown.setAttribute('aria-expanded', true);
+        dropdownList.setAttribute('aria-hidden', false);
+        dropdown.querySelector('i').style.transform = 'rotate(-180deg)';
+        dropdownList.style.display = 'block';
+        dropdownList.style.opacity = 1;
+        dropdownList.style.transform = 'translateY(0)';
+      } else {
+        dropdown.setAttribute('aria-expanded', false);
+        dropdownList.setAttribute('aria-hidden', true);
+        dropdown.querySelector('span > i').style.transform = 'rotate(0deg)';
+        dropdownList.style.display = '';
+        dropdownList.style.opacity = 0;
+        dropdownList.style.transform = 'translateY(-50%)';
+      }
+    });
+  }
+}
+
+window.customElements.define('nav-component', Navbar);
+
 /* Footer Component */
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
@@ -91,7 +171,7 @@ class CustomFooter extends HTMLElement {
   }
 }
 
-window.customElements.define('custom-footer', CustomFooter);
+window.customElements.define('footer-component', CustomFooter);
 
 /*  Awards Component */
 
@@ -148,4 +228,4 @@ class Awards extends HTMLElement {
   }
 }
 
-window.customElements.define('custom-awards', Awards);
+window.customElements.define('awards-component', Awards);

@@ -20,6 +20,7 @@
 /* Hamburger */
 .hamburger {
   display: none;
+  color: #fff;
   width: 3rem;
   height: 3.5rem;
   background: none;
@@ -42,7 +43,7 @@
 .hamburger .inner::after {
   position: absolute;
   height: 0.22rem;
-  background: #fff;
+  background: currentColor;
   border-radius: 0.25rem;
   display: block;
   transition: top 0.2s 0.2s, transform 0.2s, background-color 0.4s 0.2s;
@@ -76,18 +77,18 @@
   transform: backgorund-color 0.2s;
 }
 
-.hamburger.hamburger.menu-active .inner::before {
+.hamburger.menu-active .inner::before {
   transform: rotate(-45deg);
   top: 0;
   transition: top 0.2s, transform 0.2s 0.14s;
-  background: #fff;
+  background: currentColor;
 }
 
-.hamburger.hamburger.menu-active .inner::after {
+.hamburger.menu-active .inner::after {
   transform: rotate(45deg);
   top: 0;
   transition: top 0.2s, transform 0.2s 0.14s;
-  background: #fff;
+  background: currentColor;
 }
 
 /* Hamburger ends */
@@ -105,7 +106,6 @@
 .nav__item {
   font-size: 1.25rem;
   color: #fff;
-  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -117,77 +117,110 @@
   position: relative;
 }
 
-.nav__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transition: transform 500ms ease;
-  transform-origin: right;
-}
-
 .nav__item:hover,
 .nav__item:focus,
 .nav__item.active {
   opacity: 1;
-}
-
-.nav__link:hover::after,
-.nav__link:focus::after,
-.nav__link.active::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.nav__link.active::after {
-  transform-origin: right;
-}
-
-.nav__link.active:hover::after {
-  transform: scaleX(0.3);
-  transform-origin: right;
+  color: var(--clr-primary-500);
 }
 
 .dropdown__container {
   position: relative;
 }
 
+.dropdown__container i {
+  transition: transform 200ms ease;
+  -webkit-transition: transform 200ms ease;
+  -moz-transition: transform 200ms ease;
+  -ms-transition: transform 200ms ease;
+  -o-transition: transform 200ms ease;
+}
+
 .dropdown__menu {
   width: max-content;
   background: #000;
   padding: 0.75rem;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.1);
   position: absolute;
   top: calc(100% + 20px);
   left: 0;
+  z-index: 10;
   transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   opacity: 0;
   display: none;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
 }
 
-@keyframes dropdown-active {
-  1% {
-    display: '';
-    opacity: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+.dropdown__menu .nav__link {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .hamburger {
+    display: block;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
+
+  .nav__items {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+  }
+
+  @keyframes slideout {
+    0% {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+    }
+  }
+
+  .nav__item {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav__link {
+    display: block;
+    width: 100%;
   }
 }
