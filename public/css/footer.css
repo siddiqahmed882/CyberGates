@@ -1,6 +1,6 @@
 .footer {
-  --ft-title: 2rem;
-  --fs-icon: 1.5rem;
+  --ft-title: 1.8rem;
+  --fs-icon: 1.4rem;
 
   padding: var(--section-padding);
   padding-bottom: 0;
@@ -9,8 +9,8 @@
 
 .primary-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  gap: 1rem;
 }
 
 .column__title {
@@ -18,7 +18,7 @@
 }
 
 .column p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 

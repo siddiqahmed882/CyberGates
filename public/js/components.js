@@ -48,7 +48,7 @@ navbarTemplate.innerHTML = `
               <a 
                 href=${currPage === 'web-security' ? '#' : 'websecurity.html'} 
                 class="nav__link"
-                data-id = "services-for-smes"
+                data-id = "web-security"
                 >Web Security</a>
             </li>
           </ul>
@@ -281,3 +281,137 @@ class Awards extends HTMLElement {
 }
 
 window.customElements.define('awards-component', Awards);
+
+/* blockquote with image */
+const quotes = [
+  'Good security increases shareholder value.',
+  "Corporate trust and reputation are every company's most valuable assets.",
+  "It is much more harder to restore your company's reputation than your website files when it is hacked or defaced. Once lost, trust is very hard to get back.",
+  'I recommend employees to begin taking Security seriously. Otherwise you may be fired for causing some security problems in an organization.',
+  'The main target of security is not only creating rules but also following them.',
+];
+
+const blockquoteWithImage = document.createElement('template');
+blockquoteWithImage.innerHTML = `
+  <link rel="stylesheet" href="./css/utilities.css">
+  <style>
+    .quotes {
+      padding: var(--section-padding);
+      background: #1e1e1e url(./assets/misc/bg1.jpg) no-repeat center center/ cover;
+      background-blend-mode: overlay;
+      color: #fff;
+    }
+    
+    .quotes img {
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      box-shadow: 0 0 0 2px #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    
+    .quotes .person-info p {
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    
+    .quotes .name {
+      font-size: 2rem;
+      color: var(--clr-primary-700);
+    }
+    
+    .quotes .designation {
+      font-size: 1.25rem;
+    }
+    
+    blockquote {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.25rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    
+    blockquote::before {
+      content: open-quote;
+      position: absolute;
+      top: -0.25em;
+      left: 0;
+      font-size: 3em;
+    }
+    
+    blockquote::after {
+      content: close-quote;
+      position: absolute;
+      bottom: -0.25em;
+      right: 0.5em;
+      font-size: 3em;
+    }
+  </style>
+
+  <section class="quotes">
+    <div class="container">
+      <img src="./assets/misc/img1.jpg" alt="">
+      <div class="person-info">
+        <p class="name">Samvel Gevorgyan</p>
+        <p class="designation">CEO, Cyber Gates</p>
+      </div>
+      <blockquote>
+        ${quotes[Math.floor(Math.random() * quotes.length)]}
+      </blockquote>
+    </div>
+  </section>
+`;
+
+class BlockQuote extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(blockquoteWithImage.content.cloneNode(true));
+  }
+}
+
+window.customElements.define('blockquote-with-image', BlockQuote);
+
+/* CTA Component */
+
+const ctaTemplate = document.createElement('template');
+ctaTemplate.innerHTML = `
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/cta-component.css">
+  <section class="cta-section mb-2">
+    <div class="container">
+      <div class="cta__header mb-2">
+        <h4 class="cta__title"><slot name="title" /></h4>
+        <p class="cta__lead"><slot name="lead" /></p>
+      </div>
+      <div class="cta__content">
+        <div class="cta">
+          <div class="icon"><i class="fas fa-phone-alt fa-4x"></i></div>
+          <h4>Call Us</h4>
+          <a href="#">+1 (240) 425-7978</a>
+        </div>
+        <div class="cta">
+          <div class="icon"><i class="fab fa-telegram-plane fa-4x"></i></div>
+          <h4>Email Us</h4>
+          <a href="#">support@cybergates.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+
+class Cta extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(ctaTemplate.content.cloneNode(true));
+  }
+}
+
+window.customElements.define('cta-component', Cta);

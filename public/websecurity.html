@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/web-security.css">
+  <title>Document</title>
+</head>
+
+<body id="web-security">
+  <!-- navbar -->
+  <nav-component></nav-component>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__content flow">
+          <h1 class="hero__title">How Secure is your business?</h1>
+          <p class="hero__lead">Find out how your website protects sensitive data, online transactions and your business
+            reputation</p>
+          <form class="website-url">
+            <div class="wrapper">
+              <input type="url" class="url-field" name="web-url" id="web-url"
+                placeholder="Enter Your Website Address" />
+              <input type="submit" class="btn" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- main -->
+  <main class="main">
+    <div class="container">
+      <header class="main__header mb-2">
+        <h2 class="main__title mb-1">See if your website is safe to use</h2>
+        <p class="main__lead">Websites are tested and certified to be free of malware, phishing attacks, and other
+          threats that can steal sensitive data or harm your business reputation.
+        </p>
+      </header>
+      <div class="cards">
+        <!-- card 1 -->
+        <div class="card">
+          <div class="card__img">
+            <img src="./assets/web-security/img1.png" alt="">
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Protect valuable data and information</h4>
+            <p>Protecting sensitive data is the end goal of almost all IT security measures. Two strong arguments for
+              protecting sensitive data are to avoid identity theft and to protect privacy.</p>
+            <p>The more valuable the information in your database, the more likely it is to be targeted. If your records
+              include sensitive or financial information that could facilitate fraud, your database will be more
+              appealing to hackers who can use or sell this information for financial gain.</p>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card">
+          <div class="card__img">
+            <img src="./assets/web-security/img2.png" alt="">
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Keep your money safe from hackers</h4>
+            <p>Insecure server configuration and other known security vulnerabilities could potentially lead to
+              financial loss arising from theft of corporate and financial information, theft of money, disruption to
+              trading, loss of business or contract.</p>
+            <p>As a way of protecting consumers against this kind of risk, ecommerce and other websites that collect
+              customer credit and payments must be
+              <a href="#">PCI DSS (Payment Card Industry Data Security Standard) compliant.</a>
+            </p>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card">
+          <div class="card__img">
+            <img src="./assets/web-security/img3.png" alt="">
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Protect your brand reputation</h4>
+            <p>Your brand is the foundation of your business. It doesn't matter if you are a small business, corporation
+              or something in between, a successful cyber attack can cause major damage to your business reputation and
+              consumer trust. As a result, this could potentially lead to loss of customers, loss of sales and reduction
+              in profits.</p>
+            <p>Reputational damage can even impact on your suppliers, or affect relationships you may have with
+              partners, investors and other third parties vested in your business.</p>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card">
+          <div class="card__img">
+            <img src="./assets/web-security/img4.png" alt="">
+          </div>
+          <div class="card__content">
+            <h4 class="card__title">Evaluate risk in your business</h4>
+            <p>If your website has vulnerabilities, it is increasingly likely they will be identified and exploited by
+              hackers. Thinking about the worst things that could happen to your business can help you deal with smaller
+              risks.</p>
+            <p>Risk evaluation allows you to determine the importance of potential risks to your online business. You
+              can then decide to accept the specific risk or take action to prevent or minimize it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Block quote with image -->
+  <blockquote-with-image></blockquote-with-image>
+
+  <!-- SOPS -->
+  <section class="sops-section">
+    <div class="container">
+      <header class="section__header mb-2">
+        <h4 class="sops__title">Get away from unsafe websites</h4>
+        <p class="sops__lead">Personal information is like money. Value it. Protect it.</p>
+      </header>
+      <div class="cards"></div>
+    </div>
+  </section>
+
+  <!-- cta component -->
+  <cta-component>
+    <span slot="title">Malicious activity or malware detected?</span>
+    <span slot="lead">We provide professional Information Security services to help you secure and protect your
+      most valuable asset and your sensitive data.</span>
+  </cta-component>
+
+  <!-- footer -->
+  <footer-component></footer-component>
+
+  <!-- template -->
+  <template id="sops-card">
+    <div class="card">
+      <h4></h4>
+      <p></p>
+      <img src="" alt="">
+    </div>
+  </template>
+</body>
+<script src="./js/components.js" type="module"></script>
+<script src="./js/web-security.js" type="module"></script>
+
+</html>

@@ -50,3 +50,56 @@ export const services = [
     iconClasses: ['far', 'fa-life-ring'],
   },
 ];
+
+export const sops = [
+  {
+    title: 'Compromised site',
+    info: 'Website has been compromised and your confidential data may be at risk',
+    img: 'svg1.svg',
+  },
+  {
+    title: 'Infected site',
+    info: 'Website contains suspicious code and may trick you into installing malware',
+    img: 'svg2.svg',
+  },
+  {
+    title: 'Deceptive site',
+    info: 'Website is trying to exploit your web browser and may steal your personal data',
+    img: 'svg3.svg',
+  },
+  {
+    title: 'Blacklisted site',
+    info: 'Website is blacklisted and email messages will most certainly be marked as spam',
+    img: 'svg4.svg',
+  },
+  {
+    title: 'Phishing site',
+    info: 'Website is deceptive and may trick you into revealing confidential information',
+    img: 'svg5.svg',
+  },
+  {
+    title: 'Vulnerable transactions',
+    info: 'Website does not encrypt transactions by industry-standard security protocols',
+    img: 'svg6.svg',
+  },
+  {
+    title: 'Vulnerable site',
+    info: 'Website has vulnerabilities and they will most certainly be exploited by hackers',
+    img: 'svg7.svg',
+  },
+  {
+    title: 'Data breaches',
+    info: 'Website have accounts that have been compromised in a data breach',
+    img: 'svg8.svg',
+  },
+  {
+    title: 'Cryptocurrency mining',
+    info: 'Website is actively running cryptocurrency mining code and may drain your CPU',
+    img: 'svg9.svg',
+  },
+  {
+    title: 'Session recording',
+    info: 'Website is actively running session recording code and may collect your actions',
+    img: 'svg10.svg',
+  },
+];

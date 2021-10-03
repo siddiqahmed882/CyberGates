@@ -7,3 +7,9 @@ export const toCamelCase = (text) => {
     })
     .join('');
 };
+
+export const emptyContainer = (container) => {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+};

@@ -1,4 +1,3 @@
-@import url(./navbar.css);
 /* Hero */
 .hero-section {
   height: 90vh;
@@ -70,7 +69,7 @@ blockquote::after {
 .about__info .wrapper {
   padding: 1.25rem 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
