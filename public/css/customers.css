@@ -2,12 +2,13 @@
   padding: var(--section-padding);
 }
 
-.customers-section {
-  background: #f3f3f3;
+.customers-section,
+.partners-section {
   padding: 0.5rem;
 }
 
-.customers__header h2 {
+.customers__header h2,
+.partners__header h2 {
   font-size: var(--section-title--small);
   text-transform: capitalize;
   text-align: center;
@@ -24,32 +25,42 @@
 }
 
 .industry {
+  font-size: 0.9rem;
   padding: 0.25rem 0.75rem;
-  background: #ccc;
   cursor: pointer;
   min-width: 6rem;
+  max-width: 40ch;
   text-align: center;
   flex-grow: 1;
   border: 1px solid #000;
 }
 
 .industry.active {
-  color: red;
-}
-
-.industry:hover,
-.industry:focus {
   background: #000;
   color: #fff;
 }
 
-.customers {
+.industry.active:hover,
+.industry.active:focus {
+  background: #000;
+}
+
+.industry:hover,
+.industry:focus {
+  background: #ccc;
+}
+
+.customers,
+.partners {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
-.customer {
+.customer,
+.partner {
+  max-width: 350px;
+  margin: auto;
   box-shadow: var(--card-shadow);
   border: 1px solid #333;
   border-radius: 0.25rem;
@@ -66,7 +77,9 @@
 }
 
 .customer:hover,
-.customer:focus {
+.customer:focus,
+.partner:hover,
+.partner:focus {
   transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
@@ -74,12 +87,14 @@
   -o-transform: scale(0.95);
 }
 
-.customer a {
+.customer a,
+.partner a {
   display: block;
   width: 100%;
 }
 
-.customer img {
+.customer img,
+.partner img {
   width: 100%;
   height: 100%;
   object-fit: fill;

@@ -121,13 +121,10 @@ export const industries = [
         link: 'http://www.auto.am/',
       },
       { src: 'customer13.jpg', link: 'http://creative-solutions.net/' },
-      { src: 'customer18.jpg', link: 'http://www.expowl.com/s' },
+      { src: 'customer18.png', link: 'http://www.expowl.com/s' },
       { src: 'customer28.jpg', link: 'http://mersoft.am/' },
-      { src: 'customer37.jpg', link: 'http://qartez.am/' },
-      {
-        src: 'customer41.jpg',
-        link: 'https://play.google.com/store/apps/details?id=tech.transceptor.mobileprayer',
-      },
+      { src: 'customer37.png', link: 'http://qartez.am/' },
+      { src: 'customer41.png', link: 'https://play.google.com/store/apps' },
     ],
   },
   {
@@ -153,7 +150,7 @@ export const industries = [
       { src: 'customer26.jpg', link: 'http://mediamax.am/' },
       { src: 'customer38.jpg', link: 'http://www.radiovan.fm/' },
       { src: 'customer39.jpg', link: 'http://sharmholding.com/' },
-      { src: 'customer42.jpg', link: 'http://april2016.am/' },
+      { src: 'customer42.png', link: 'http://april2016.am/' },
     ],
   },
   {
@@ -196,7 +193,7 @@ export const industries = [
   {
     id: 7,
     name: 'Consumer services',
-    imgs: [{ src: 'customer11.jpg', link: 'http://bitcoin-pizza.com/' }],
+    imgs: [{ src: 'customer11.png', link: 'http://bitcoin-pizza.com/' }],
   },
   {
     id: 8,
