@@ -1,0 +1,86 @@
+.main {
+  padding: var(--section-padding);
+}
+
+.customers-section {
+  background: #f3f3f3;
+  padding: 0.5rem;
+}
+
+.customers__header h2 {
+  font-size: var(--section-title--small);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.customers__filter h4 {
+  font-size: 1.625rem;
+}
+
+.industry__names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+
+.industry {
+  padding: 0.25rem 0.75rem;
+  background: #ccc;
+  cursor: pointer;
+  min-width: 6rem;
+  text-align: center;
+  flex-grow: 1;
+  border: 1px solid #000;
+}
+
+.industry.active {
+  color: red;
+}
+
+.industry:hover,
+.industry:focus {
+  background: #000;
+  color: #fff;
+}
+
+.customers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.customer {
+  box-shadow: var(--card-shadow);
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  transition: transform 200ms ease;
+  overflow: hidden;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  -webkit-transition: transform 200ms ease;
+  -moz-transition: transform 200ms ease;
+  -ms-transition: transform 200ms ease;
+  -o-transition: transform 200ms ease;
+}
+
+.customer:hover,
+.customer:focus {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+.customer a {
+  display: block;
+  width: 100%;
+}
+
+.customer img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}

@@ -106,82 +106,83 @@ export const sops = [
 
 export const industries = [
   {
+    id: 1,
     name: 'Energy and Utilities',
-    imgs: ['customer1.jpg'],
+    imgs: [{ src: 'customer1.jpg', link: '' }],
   },
-  {
-    name: 'Software and internet',
-    imgs: [
-      'customer2.jpg',
-      'customer3.jpg',
-      'customer9.jpg',
-      'customer13.jpg',
-      'customer18.jpg',
-      'customer28.jpg',
-      'customer37.jpg',
-      'customer41.jpg',
-    ],
-  },
-  {
-    name: 'Telecommunication',
-    imgs: ['customer4.jpg', 'customer30.jpg'],
-  },
-  {
-    name: 'Media and entertainment',
-    imgs: [
-      'customer5.jpg',
-      'customer10.jpg',
-      'customer12.jpg',
-      'customer22.jpg',
-      'customer24.jpg',
-      'customer26.jpg',
-      'customer38.jpg',
-      'customer39.jpg',
-      'customer42.jpg',
-    ],
-  },
-  {
-    name: 'Non-profit organization',
-    imgs: [
-      'customer6.jpg',
-      'customer8.jpg',
-      'customer15.jpg',
-      'customer19.jpg',
-      'customer21.jpg',
-    ],
-  },
-  {
-    name: 'Business Services',
-    imgs: [
-      'customer7.jpg',
-      'customer17.jpg',
-      'customer23.jpg',
-      'customer27.jpg',
-      'customer40.jpg',
-    ],
-  },
-  {
-    name: 'Consumer services',
-    imgs: ['customer11.jpg'],
-  },
-  {
-    name: 'Health and pharmaceutical',
-    imgs: ['customer14.jpg'],
-  },
-  {
-    name: 'Education',
-    imgs: ['customer16.jpg', 'customer20.jpg', 'customer30.jpg'],
-  },
-  {
-    name: 'Retail',
-    imgs: ['customer29.jpg', 'customer31.jpg', 'customer32.jpg', 'customer33.jpg'],
-  },
-  {
-    name: 'Travel recreation and liesure',
-    imgs: ['customer34.jpg'],
-  },
-  {
-    name: 'Government',
-    imgs: ['customer35.jpg'],
-  },
+  // {
+  //   name: 'Software and internet',
+  //   imgs: [
+  //     'customer2.jpg',
+  //     'customer3.jpg',
+  //     'customer9.jpg',
+  //     'customer13.jpg',
+  //     'customer18.jpg',
+  //     'customer28.jpg',
+  //     'customer37.jpg',
+  //     'customer41.jpg',
+  //   ],
+  // },
+  // {
+  //   name: 'Telecommunication',
+  //   imgs: ['customer4.jpg', 'customer30.jpg'],
+  // },
+  // {
+  //   name: 'Media and entertainment',
+  //   imgs: [
+  //     'customer5.jpg',
+  //     'customer10.jpg',
+  //     'customer12.jpg',
+  //     'customer22.jpg',
+  //     'customer24.jpg',
+  //     'customer26.jpg',
+  //     'customer38.jpg',
+  //     'customer39.jpg',
+  //     'customer42.jpg',
+  //   ],
+  // },
+  // {
+  //   name: 'Non-profit organization',
+  //   imgs: [
+  //     'customer6.jpg',
+  //     'customer8.jpg',
+  //     'customer15.jpg',
+  //     'customer19.jpg',
+  //     'customer21.jpg',
+  //   ],
+  // },
+  // {
+  //   name: 'Business Services',
+  //   imgs: [
+  //     'customer7.jpg',
+  //     'customer17.jpg',
+  //     'customer23.jpg',
+  //     'customer27.jpg',
+  //     'customer40.jpg',
+  //   ],
+  // },
+  // {
+  //   name: 'Consumer services',
+  //   imgs: ['customer11.jpg'],
+  // },
+  // {
+  //   name: 'Health and pharmaceutical',
+  //   imgs: ['customer14.jpg'],
+  // },
+  // {
+  //   name: 'Education',
+  //   imgs: ['customer16.jpg', 'customer20.jpg', 'customer30.jpg'],
+  // },
+  // {
+  //   name: 'Retail',
+  //   imgs: ['customer29.jpg', 'customer31.jpg', 'customer32.jpg', 'customer33.jpg'],
+  // },
+  // {
+  //   name: 'Travel recreation and liesure',
+  //   imgs: ['customer34.jpg'],
+  // },
+  // {
+  //   name: 'Government',
+  //   imgs: ['customer35.jpg'],
+  // },
 ];
