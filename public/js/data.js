@@ -108,81 +108,238 @@ export const industries = [
   {
     id: 1,
     name: 'Energy and Utilities',
-    imgs: [{ src: 'customer1.jpg', link: '' }],
+    imgs: [{ src: 'customer1.jpg', link: 'https://www.contourglobal.com/' }],
   },
-  // {
-  //   name: 'Software and internet',
-  //   imgs: [
-  //     'customer2.jpg',
-  //     'customer3.jpg',
-  //     'customer9.jpg',
-  //     'customer13.jpg',
-  //     'customer18.jpg',
-  //     'customer28.jpg',
-  //     'customer37.jpg',
-  //     'customer41.jpg',
-  //   ],
-  // },
-  // {
-  //   name: 'Telecommunication',
-  //   imgs: ['customer4.jpg', 'customer30.jpg'],
-  // },
-  // {
-  //   name: 'Media and entertainment',
-  //   imgs: [
-  //     'customer5.jpg',
-  //     'customer10.jpg',
-  //     'customer12.jpg',
-  //     'customer22.jpg',
-  //     'customer24.jpg',
-  //     'customer26.jpg',
-  //     'customer38.jpg',
-  //     'customer39.jpg',
-  //     'customer42.jpg',
-  //   ],
-  // },
-  // {
-  //   name: 'Non-profit organization',
-  //   imgs: [
-  //     'customer6.jpg',
-  //     'customer8.jpg',
-  //     'customer15.jpg',
-  //     'customer19.jpg',
-  //     'customer21.jpg',
-  //   ],
-  // },
-  // {
-  //   name: 'Business Services',
-  //   imgs: [
-  //     'customer7.jpg',
-  //     'customer17.jpg',
-  //     'customer23.jpg',
-  //     'customer27.jpg',
-  //     'customer40.jpg',
-  //   ],
-  // },
-  // {
-  //   name: 'Consumer services',
-  //   imgs: ['customer11.jpg'],
-  // },
-  // {
-  //   name: 'Health and pharmaceutical',
-  //   imgs: ['customer14.jpg'],
-  // },
-  // {
-  //   name: 'Education',
-  //   imgs: ['customer16.jpg', 'customer20.jpg', 'customer30.jpg'],
-  // },
-  // {
-  //   name: 'Retail',
-  //   imgs: ['customer29.jpg', 'customer31.jpg', 'customer32.jpg', 'customer33.jpg'],
-  // },
-  // {
-  //   name: 'Travel recreation and liesure',
-  //   imgs: ['customer34.jpg'],
-  // },
-  // {
-  //   name: 'Government',
-  //   imgs: ['customer35.jpg'],
-  // },
+  {
+    id: 2,
+    name: 'Software and internet',
+    imgs: [
+      { src: 'customer2.jpg', link: 'http://itsallgoodhere.com/' },
+      { src: 'customer3.jpg', link: 'https://mobileid.am/' },
+      {
+        src: 'customer9.jpg',
+        link: 'http://www.auto.am/',
+      },
+      { src: 'customer13.jpg', link: 'http://creative-solutions.net/' },
+      { src: 'customer18.jpg', link: 'http://www.expowl.com/s' },
+      { src: 'customer28.jpg', link: 'http://mersoft.am/' },
+      { src: 'customer37.jpg', link: 'http://qartez.am/' },
+      {
+        src: 'customer41.jpg',
+        link: 'https://play.google.com/store/apps/details?id=tech.transceptor.mobileprayer',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Telecommunication',
+    imgs: [
+      {
+        src: 'customer4.jpg',
+        link: 'http://nikita.am/',
+      },
+      { src: 'customer30.jpg', link: 'http://www.mts.am/' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Media and entertainment',
+    imgs: [
+      { src: 'customer5.jpg', link: 'http://168.am/' },
+      { src: 'customer10.jpg', link: 'http://banks.am/' },
+      { src: 'customer12.jpg', link: 'http://bravo.am/' },
+      { src: 'customer22.jpg', link: 'http://itel.am/' },
+      { src: 'customer24.jpg', link: 'http://maxmonitor.am/' },
+      { src: 'customer26.jpg', link: 'http://mediamax.am/' },
+      { src: 'customer38.jpg', link: 'http://www.radiovan.fm/' },
+      { src: 'customer39.jpg', link: 'http://sharmholding.com/' },
+      { src: 'customer42.jpg', link: 'http://april2016.am/' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Non-profit organization',
+    imgs: [
+      {
+        src: 'customer6.jpg',
+        link: 'http://256.foundation/',
+      },
+      {
+        src: 'customer8.jpg',
+        link: 'https://auroraprize.com/',
+      },
+      {
+        src: 'customer15.jpg',
+        link: 'http://eif.am/',
+      },
+      {
+        src: 'customer19.jpg',
+        link: 'http://fsm.am/',
+      },
+      {
+        src: 'customer21.jpg',
+        link: 'http://idea.am/',
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Business Services',
+    imgs: [
+      { src: 'customer7.jpg', link: 'http://aston.es/' },
+      { src: 'customer17.jpg', link: 'http://evolver.am/' },
+      { src: 'customer23.jpg', link: 'http://www.locator.am/' },
+      { src: 'customer27.jpg', link: 'http://mediapro.am/' },
+      { src: 'customer40.jpg', link: 'http://spyur.am/' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Consumer services',
+    imgs: [{ src: 'customer11.jpg', link: 'http://bitcoin-pizza.com/' }],
+  },
+  {
+    id: 8,
+    name: 'Health and pharmaceutical',
+    imgs: [
+      {
+        src: 'customer14.jpg',
+        link: 'http://diavant.am/',
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Education',
+    imgs: [
+      {
+        src: 'customer16.jpg',
+        link: 'http://elcarmenia.am/',
+      },
+      {
+        src: 'customer20.jpg',
+        link: 'http://gb.am/',
+      },
+      {
+        src: 'customer30.jpg',
+        link: 'http://www.mts.am/',
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Retail',
+    imgs: [
+      { src: 'customer29.jpg', link: 'http://www.mothercarearmenia.am/' },
+      { src: 'customer31.jpg', link: 'http://nairian.am/' },
+      { src: 'customer32.jpg', link: 'http://nairian.com/' },
+      { src: 'customer33.jpg', link: 'http://nairian.jp/' },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Travel recreation and liesure',
+    imgs: [
+      {
+        src: 'customer34.jpg',
+        link: 'http://hinpekin.am/',
+      },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Government',
+    imgs: [{ src: 'customer35.jpg', link: 'http://police.am/' }],
+  },
+];
+
+export const partners = [
+  {
+    src: 'partner1.jpg',
+    link: 'https://www.facebook.com/alga2014',
+  },
+  {
+    src: 'partner2.jpg',
+    link: 'http://www.armindia.am/',
+  },
+  {
+    src: 'partner3.jpg',
+    link: 'http://antitrafficking.am/',
+  },
+  {
+    src: 'partner4.jpg',
+    link: 'http://axoft.ru/',
+  },
+  {
+    src: 'partner5.jpg',
+    link: 'http://clubhack.com/',
+  },
+  {
+    src: 'partner6.jpg',
+    link: 'http://www.comodo.com/',
+  },
+  {
+    src: 'partner7.jpg',
+    link: 'http://easydmarc.com/',
+  },
+  {
+    src: 'partner8.jpg',
+    link: 'http://hakin9.org/',
+  },
+  {
+    src: 'partner9.jpg',
+    link: 'http://ibm.com/',
+  },
+  {
+    src: 'partner10.jpg',
+    link: 'http://www.infosys.am/',
+  },
+  {
+    src: 'partner11.jpg',
+    link: 'http://investigative.am/',
+  },
+  {
+    src: 'partner12.jpg',
+    link: 'http://it-universalzone.com/',
+  },
+  {
+    src: 'partner13.png',
+    link: 'http://moj.am/',
+  },
+  {
+    src: 'partner14.jpg',
+    link: 'http://www.mlabeca.com/',
+  },
+  {
+    src: 'partner15.jpg',
+    link: 'http://neomedia.am/',
+  },
+  {
+    src: 'partner16.jpg',
+    link: 'http://www.snb.am/',
+  },
+  {
+    src: 'partner17.jpg',
+    link: 'http://owasp.com/',
+  },
+  {
+    src: 'partner18.jpg',
+    link: 'http://pentestmag.com/?a_aid=katarzynazwierowicz&a_bid=163efff7',
+  },
+  {
+    src: 'partner19.jpg',
+    link: 'http://safe.am/',
+  },
+  {
+    src: 'partner20.jpg',
+    link: 'http://shahumyanmedia.com/',
+  },
+  {
+    src: 'partner21.jpg',
+    link: 'http://tsd.am/',
+  },
+  {
+    src: 'partner22.jpg',
+    link: 'http://www.x-tech.am/',
+  },
 ];
