@@ -1,0 +1,21 @@
+/* Hero */
+.hero-section {
+  height: 90vh;
+  background: #333 no-repeat center center / cover;
+  background-blend-mode: overlay;
+  color: var(--clr-neutral-900);
+}
+
+.hero__content {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: var(--hero-title);
+  line-height: 1;
+  color: var(--clr-primary-600);
+  user-select: none;
+}

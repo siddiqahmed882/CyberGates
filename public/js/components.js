@@ -130,6 +130,59 @@ class Navbar extends HTMLElement {
 
 window.customElements.define('nav-component', Navbar);
 
+/* Hero Component */
+let backgroundImage;
+switch (currPage) {
+  case 'about':
+    backgroundImage = './assets/about/img1.jpg';
+    break;
+  case 'customers':
+    backgroundImage = './assets/customers/img1.jpg';
+    break;
+}
+const heroTemplate = document.createElement('template');
+heroTemplate.innerHTML = `
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <style>
+    .hero-section{
+      background-image: url(${
+        (currPage === 'about' && './assets/about/img1.jpg') ||
+        (currPage === 'services' && './assets/about/img1.jpg') ||
+        (currPage === 'services-for-smes' && './assets/about/img1.jpg.')
+      })
+    }
+  </style>
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title"><slot name="title" /></h1>
+      </div>
+    </div>
+  </section>
+`;
+
+class Hero extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(heroTemplate.content.cloneNode(true));
+  }
+  // connectedCallback() {
+  //   const hero = this.shadowRoot.querySelector('.hero-section');
+  //   switch (currPage) {
+  //     case 'about':
+  //       hero.style.backgroundImage = './assets/about/img1.jpg';
+  //       break;
+  //     case 'customers':
+  //       hero.style.backgroundImage = './assets/customers/img1.jpg';
+  //       break;
+  //   }
+  // }
+}
+
+window.customElements.define('hero-component', Hero);
+
 /* Footer Component */
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `

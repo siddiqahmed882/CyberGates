@@ -7,6 +7,8 @@
   --clr-primary-300: hsl(120, 100%, 15%);
   --clr-primary-200: hsl(120, 100%, 10%);
 
+  --hero-title: clamp(4rem, 1.75rem + 2vw, 6rem);
+
   --section-padding: min(3rem, 10vw) 0;
 
   --section-title: clamp(3rem, 1rem + 1vw, 5rem);

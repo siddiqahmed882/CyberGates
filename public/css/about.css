@@ -1,25 +1,3 @@
-/* Hero */
-.hero-section {
-  height: 90vh;
-  background: #333 url(../assets/about/img1.jpg) no-repeat center center / cover;
-  background-blend-mode: overlay;
-  color: var(--clr-neutral-900);
-}
-
-.hero__content {
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero__title {
-  font-size: clamp(3rem, 1.75rem + 2vw, 6rem);
-  line-height: 1;
-  color: var(--clr-primary-600);
-  user-select: none;
-}
-
 /* Main */
 
 .about-section {

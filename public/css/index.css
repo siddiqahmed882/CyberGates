@@ -18,14 +18,14 @@
 }
 
 .hero__title {
-  font-size: clamp(5rem, 4rem + 2vw, 9rem);
+  font-size: var(--hero-title);
   line-height: 0.9;
   color: var(--clr-primary-500);
   user-select: none;
 }
 
 .hero__lead {
-  font-size: clamp(2rem, 0.75rem + 1vw, 4rem);
+  font-size: clamp(1.5rem, 0.75rem + 1vw, 4rem);
 }
 
 .down-arrow {
