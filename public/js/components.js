@@ -147,9 +147,10 @@ heroTemplate.innerHTML = `
   <style>
     .hero-section{
       background-image: url(${
-        (currPage === 'about' && './assets/about/img1.jpg') ||
-        (currPage === 'services' && './assets/about/img1.jpg') ||
-        (currPage === 'services-for-smes' && './assets/about/img1.jpg.')
+        (currPage === 'about' && './assets/about/bg.jpg') ||
+        (currPage === 'services' && './assets/about/bg.jpg') ||
+        (currPage === 'services-for-smes' && './assets/about/bg.jpg.') ||
+        (currPage === 'customers' && './assets/customers/bg.jpg')
       })
     }
   </style>
