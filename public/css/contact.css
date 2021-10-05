@@ -3,7 +3,7 @@
 }
 
 .main .container {
-  width: min(800px, 90vw);
+  width: min(800px, 80vw);
 }
 
 .main__title {
@@ -18,7 +18,7 @@
 
 .contact-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+  grid-template-columns: repeat(auto-fit, 1fr);
   grid-template-areas:
     'name email'
     'phone website'
@@ -26,6 +26,19 @@
     'message message'
     '....... submit';
   gap: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form {
+    grid-template-areas:
+      'name'
+      'email'
+      'phone'
+      'website'
+      'subject'
+      'message'
+      'submit';
+  }
 }
 
 input,
