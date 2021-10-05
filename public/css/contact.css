@@ -1,0 +1,118 @@
+.main {
+  padding: var(--section-padding);
+}
+
+.main .container {
+  width: min(800px, 90vw);
+}
+
+.main__title {
+  font-size: var(--section-title--small);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main__lead {
+  font-size: var(--section-lead);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40ch, 1fr));
+  grid-template-areas:
+    'name email'
+    'phone website'
+    'subject subject'
+    'message message'
+    '....... submit';
+  gap: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.25rem 0.75rem;
+}
+
+.name-field {
+  grid-area: name;
+}
+
+.email-field {
+  grid-area: email;
+}
+
+.phone-field {
+  grid-area: phone;
+}
+
+.website-field {
+  grid-area: website;
+}
+
+.subject-field {
+  grid-area: subject;
+}
+
+.message-field {
+  grid-area: message;
+}
+
+.submit-field {
+  grid-area: submit;
+}
+
+select {
+  width: 100%;
+}
+
+input[type='submit'] {
+  display: block;
+  margin-left: auto;
+  border: 1px solid currentColor;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+input[type='submit']:focus,
+input[type='submit']:hover {
+  background-color: #000;
+  color: var(--clr-neutral-900);
+}
+
+.secondary__contact__details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  gap: 0.75rem;
+}
+
+.contact__details {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: var(--card-shadow);
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.contact__details .country__name {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  margin-bottom: 0.75rem;
+}
+
+.contact__details .address,
+.contact__details .email {
+  margin-bottom: 0.25rem;
+}
+
+.contact__details .email a:hover,
+.contact__details .email a:focus,
+.contact__details .phone a:hover,
+.contact__details .phone a:focus {
+  color: var(--clr-primary-200);
+  text-decoration: underline;
+}

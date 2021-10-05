@@ -340,3 +340,42 @@ export const partners = [
     link: 'http://www.x-tech.am/',
   },
 ];
+
+export const contactDetails = [
+  {
+    country: 'USA',
+    address: '1220 L street 100/3, 20005 Washington DC, USA',
+    email: 'davit.mnatsakanyan@cybergates.org',
+    phone: '+1 (240) 425-7978',
+  },
+  {
+    country: 'United Kingdom',
+    address: 'Suite 101, Uxbridge House, 464 Uxbridge Rd, Hayes UB4 0SD, UK',
+    email: 'jacques.delport@cybergates.org',
+    phone: '+44 (77) 3316-4633',
+  },
+  {
+    country: 'Germany',
+    address: '6 Berliner street, 27211 Bassum, Germany',
+    email: 'marine.bambalyan@cybergates.org',
+    phone: '+49 (173) 364-2484',
+  },
+  {
+    country: 'Spain',
+    address: '4 Peru street, Las Rozas, 28290 Madrid, Spain',
+    email: 'inaki.miquelez@cybergates.org',
+    phone: '+34 (91) 630-0655',
+  },
+  {
+    country: 'Russia',
+    address: '2 Gamovskaya street 56, 614065 Perm, Russia',
+    email: 'edgar.chraghyan@cybergates.org',
+    phone: '+7 (909) 101-1665',
+  },
+  {
+    country: 'Armenia',
+    address: '50 Shiraz street, room 31, 0088 Yerevan, Armenia',
+    email: 'samvel.gevorgyan@cybergates.org',
+    phone: '+374 (96) 345-685',
+  },
+];

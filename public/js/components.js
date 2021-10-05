@@ -69,9 +69,9 @@ navbarTemplate.innerHTML = `
         </li>
         <li class="nav__item">
           <a 
-          href=${currPage === 'contacts' ? '#' : 'contacts.html'} 
+          href=${currPage === 'contact' ? '#' : 'contact.html'} 
           class="nav__link"
-          data-id='contacts'
+          data-id='contact'
           >Contacts</a>
         </li>
       </ul>
@@ -169,17 +169,6 @@ class Hero extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.appendChild(heroTemplate.content.cloneNode(true));
   }
-  // connectedCallback() {
-  //   const hero = this.shadowRoot.querySelector('.hero-section');
-  //   switch (currPage) {
-  //     case 'about':
-  //       hero.style.backgroundImage = './assets/about/img1.jpg';
-  //       break;
-  //     case 'customers':
-  //       hero.style.backgroundImage = './assets/customers/img1.jpg';
-  //       break;
-  //   }
-  // }
 }
 
 window.customElements.define('hero-component', Hero);
