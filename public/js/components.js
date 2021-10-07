@@ -230,7 +230,7 @@ footerTemplate.innerHTML = `
       <div class="secondary-content mb-2">
         <div class="left">
           <h3>Awards</h3>
-          <img src="./assets/index/img9.png" alt="">
+          <img src="./assets/index/img10.png" alt="">
         </div>
         <div class="right">
           <h3>Powered by</h3>

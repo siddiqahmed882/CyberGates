@@ -147,6 +147,15 @@
   background: var(--clr-neutral-900);
 }
 
+.features-section .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-section .column p {
+  flex-grow: 1;
+}
+
 @keyframes bounce {
   0% {
     transform: translateY(0);
