@@ -1,101 +1,103 @@
 .main {
-  padding: var(--section-padding);
+    padding: var(--section-padding);
 }
 
 .customers-section,
 .partners-section {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 .customers__header h2,
 .partners__header h2 {
-  font-size: var(--section-title--small);
-  text-transform: capitalize;
-  text-align: center;
+    font-size: var(--section-title--small);
+    text-transform: capitalize;
+    text-align: center;
 }
 
 .customers__filter h4 {
-  font-size: 1.625rem;
+    font-size: 1.625rem;
 }
 
 .industry__names {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
 }
 
 .industry {
-  font-size: 0.9rem;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  min-width: 6rem;
-  max-width: 40ch;
-  text-align: center;
-  flex-grow: 1;
-  border: 1px solid #000;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+    min-width: 6rem;
+    max-width: 40ch;
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: rgb(124, 168, 57);
+    color: white;
 }
 
 .industry.active {
-  background: #000;
-  color: #fff;
+    background-color: rgb(54, 73, 26);
+    color: #fff;
 }
 
 .industry.active:hover,
 .industry.active:focus {
-  background: #000;
+    background-color: rgb(54, 73, 26);
 }
 
 .industry:hover,
 .industry:focus {
-  background: #ccc;
+    background-color: rgb(101, 138, 45);
 }
 
 .customers,
 .partners {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
 .customer,
 .partner {
-  max-width: 350px;
-  margin: auto;
-  box-shadow: var(--card-shadow);
-  border: 1px solid #333;
-  border-radius: 0.25rem;
-  transition: transform 200ms ease;
-  overflow: hidden;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
-  -webkit-transition: transform 200ms ease;
-  -moz-transition: transform 200ms ease;
-  -ms-transition: transform 200ms ease;
-  -o-transition: transform 200ms ease;
+    margin: auto;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    transition: transform 200ms ease;
+    overflow: hidden;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
+    -webkit-transition: transform 200ms ease;
+    -moz-transition: transform 200ms ease;
+    -ms-transition: transform 200ms ease;
+    -o-transition: transform 200ms ease;
 }
 
 .customer:hover,
 .customer:focus,
 .partner:hover,
 .partner:focus {
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
 }
 
 .customer a,
 .partner a {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .customer img,
 .partner img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }

@@ -1,13 +1,43 @@
 .subscription {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    background: rgb(121, 9, 49);
+    background: linear-gradient( 90deg, rgba(121, 9, 49, 1) 35%, rgba(0, 255, 81, 1) 100%);
+}
+
+.servicesContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    /* justify-items: center; */
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
     padding: 20px;
-    width: 50%;
+}
+
+.servicesContent h2 {
+    font-size: var(--section-title);
+    text-transform: uppercase;
+}
+
+.servicesContent p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #2e2e2e;
+    font-size: 1.5rem;
 }
 
 table,
 th,
 td {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     text-align: center;
     /* border-radius: 200px; */
 }
@@ -15,6 +45,7 @@ td {
 table {
     padding: 20px;
     font-size: 1.25rem;
+    color: whitesmoke;
 }
 
 th,
