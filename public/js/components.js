@@ -1,7 +1,7 @@
 /* Navbar Component */
 const currPage = document.body.id;
 
-const navbarTemplate = document.createElement('template');
+const navbarTemplate = document.createElement("template");
 navbarTemplate.innerHTML = `
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -15,14 +15,14 @@ navbarTemplate.innerHTML = `
       <ul class="nav__items">
         <li class="nav__item">
           <a 
-            href=${currPage === 'home' ? '#' : 'index.html'}
+            href=${currPage === "home" ? "#" : "index.html"}
             class="nav__link"
             data-id="home"
           >Home</a>
         </li>
         <li class="nav__item">
         <a 
-          href=${currPage === 'about' ? '#' : 'about.html'}
+          href=${currPage === "about" ? "#" : "about.html"}
           class="nav__link"
           data-id="about"
           >About</a>
@@ -32,21 +32,25 @@ navbarTemplate.innerHTML = `
           <ul class="dropdown__menu" aria-hidden="true">
             <li class="nav__item">
               <a 
-                href=${currPage === 'services' ? '#' : 'services.html'} 
+                href=${currPage === "services" ? "#" : "services.html"} 
                 class="nav__link"
                 data-id="services"
                 >Services Overview</a>
             </li>
             <li class="nav__item">
               <a 
-                href=${currPage === 'services-for-smes' ? '#' : 'servicesforsmes.html'} 
+                href=${
+                  currPage === "services-for-smes"
+                    ? "#"
+                    : "servicesforsmes.html"
+                } 
                 class="nav__link"
                 data-id="services-for-smes"
                 >Web Security & Hosting Plans</a>
             </li>
             <li class="nav__item">
               <a 
-                href=${currPage === 'web-security' ? '#' : 'websecurity.html'} 
+                href=${currPage === "web-security" ? "#" : "websecurity.html"} 
                 class="nav__link"
                 data-id = "web-security"
                 >Web Security</a>
@@ -55,14 +59,14 @@ navbarTemplate.innerHTML = `
         </li>
         <li class="nav__item">
           <a 
-            href=${currPage === 'customers' ? '#' : 'customers.html'} 
+            href=${currPage === "customers" ? "#" : "customers.html"} 
             class="nav__link"
             data-id='customers'
             >Customers</a>
         </li>
         <li class="nav__item">
           <a 
-          href=${currPage === 'contact' ? '#' : 'contact.html'} 
+          href=${currPage === "contact" ? "#" : "contact.html"} 
           class="nav__link"
           data-id='contact'
           >Contacts</a>
@@ -76,67 +80,70 @@ navbarTemplate.innerHTML = `
 `;
 
 class Navbar extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
+    }
 
-  connectedCallback() {
-    // adding active class
-    this.shadowRoot.querySelector(`[data-id = ${currPage}]`).classList.add('active');
+    connectedCallback() {
+        // adding active class
+        this.shadowRoot
+            .querySelector(`[data-id = ${currPage}]`)
+            .classList.add("active");
 
-    const hamburger = this.shadowRoot.getElementById('hamburger');
-    const navItems = this.shadowRoot.querySelector('.nav__items');
-    const dropdown = this.shadowRoot.querySelector('.dropdown__container');
-    const dropdownList = this.shadowRoot.querySelector('.dropdown__menu');
+        const hamburger = this.shadowRoot.getElementById("hamburger");
+        const navItems = this.shadowRoot.querySelector(".nav__items");
+        const dropdown = this.shadowRoot.querySelector(".dropdown__container");
+        const dropdownList = this.shadowRoot.querySelector(".dropdown__menu");
 
-    hamburger.addEventListener('click', () => {
-      if (hamburger.classList.contains('menu-active')) {
-        hamburger.classList.remove('menu-active');
-        navItems.style.animation = 'slideout 200ms ease forwards';
-      } else {
-        hamburger.classList.add('menu-active');
-        navItems.style.animation = 'slidein 200ms ease forwards';
-      }
-    });
+        hamburger.addEventListener("click", () => {
+            if (hamburger.classList.contains("menu-active")) {
+                hamburger.classList.remove("menu-active");
+                navItems.style.animation = "slideout 200ms ease forwards";
+            } else {
+                hamburger.classList.add("menu-active");
+                navItems.style.animation = "slidein 200ms ease forwards";
+            }
+        });
 
-    dropdown.addEventListener('click', () => {
-      if (dropdown.getAttribute('aria-expanded') === 'false') {
-        dropdown.setAttribute('aria-expanded', true);
-        dropdownList.setAttribute('aria-hidden', false);
-        dropdown.querySelector('i').style.transform = 'rotate(-180deg)';
-        dropdownList.style.display = 'block';
-        dropdownList.style.opacity = 1;
-        dropdownList.style.transform = 'translateY(0)';
-      } else {
-        dropdown.setAttribute('aria-expanded', false);
-        dropdownList.setAttribute('aria-hidden', true);
-        dropdown.querySelector('span > i').style.transform = 'rotate(0deg)';
-        dropdownList.style.display = '';
-        dropdownList.style.opacity = 0;
-        dropdownList.style.transform = 'translateY(-50%)';
-      }
-    });
-  }
+        dropdown.addEventListener("click", () => {
+            if (dropdown.getAttribute("aria-expanded") === "false") {
+                dropdown.setAttribute("aria-expanded", true);
+                dropdownList.setAttribute("aria-hidden", false);
+                dropdown.querySelector("i").style.transform = "rotate(-180deg)";
+                dropdownList.style.display = "block";
+                dropdownList.style.opacity = 1;
+                dropdownList.style.transform = "translateY(0)";
+            } else {
+                dropdown.setAttribute("aria-expanded", false);
+                dropdownList.setAttribute("aria-hidden", true);
+                dropdown.querySelector("span > i").style.transform = "rotate(0deg)";
+                dropdownList.style.display = "";
+                dropdownList.style.opacity = 0;
+                dropdownList.style.transform = "translateY(-50%)";
+            }
+        });
+    }
 }
 
-window.customElements.define('nav-component', Navbar);
+window.customElements.define("nav-component", Navbar);
 
 /* Hero Component */
-const heroTemplate = document.createElement('template');
+const heroTemplate = document.createElement("template");
 heroTemplate.innerHTML = `
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/hero.css">
   <style>
     .hero-section{
       background-image: url(${
-        (currPage === 'about' && './assets/about/hero.jpg') ||
-        (currPage === 'services' && './assets/about/hero.jpg') ||
-        (currPage === 'services-for-smes' && './assets/servicesforSEMS/hero.jpg') ||
-        (currPage === 'customers' && './assets/customers/hero.jpg') ||
-        (currPage === 'contact' && './assets/contact/hero.jpg') ||
-        './assets/index/hero.jpg'
+        (currPage === "about" && "./assets/about/hero.jpg") ||
+        (currPage === "services" && "./assets/about/hero.jpg") ||
+        (currPage === "services-for-smes" &&
+          "./assets/servicesforSEMS/hero.jpg") ||
+        (currPage === "customers" && "./assets/customers/hero.jpg") ||
+        (currPage === "contact" && "./assets/contact/hero.jpg") ||
+        "./assets/index/hero.jpg"
       })
     }
   </style>
@@ -150,17 +157,17 @@ heroTemplate.innerHTML = `
 `;
 
 class Hero extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(heroTemplate.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(heroTemplate.content.cloneNode(true));
+    }
 }
 
-window.customElements.define('hero-component', Hero);
+window.customElements.define("hero-component", Hero);
 
 /* Footer Component */
-const footerTemplate = document.createElement('template');
+const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -179,7 +186,7 @@ footerTemplate.innerHTML = `
         </div>
         <div class="column">
           <h3 class="column__title mb-1">Stay in touch</h3>
-          <p>Join the CYBER GATES community and stay up-to-date with today's security issues and company offers.</p>
+          <p>Join the The Eye Of Cyber community and stay up-to-date with today's security issues and company offers.</p>
           <div class="social-links">
             <div class="social-icon">
               <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -216,7 +223,7 @@ footerTemplate.innerHTML = `
             </li>
             <li>
               <span class="icon"><i class="far fa-envelope"></i></span>
-              <a href="#">info@cybergates.org</a>
+              <a href="#">info@theeyeofcyber.org</a>
             </li>
             <li>
               <span class="icon"><i class="far fa-building"></i></span>
@@ -239,24 +246,24 @@ footerTemplate.innerHTML = `
       </div>
     </div>
     <div class="copyright">
-      <p>© 2011-2021 CYBER GATES, LLC</p>
+      <p>© 2011-2021 The Eye Of Cyber, LLC</p>
     </div>
   </footer>
 `;
 
 class CustomFooter extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
+    }
 }
 
-window.customElements.define('footer-component', CustomFooter);
+window.customElements.define("footer-component", CustomFooter);
 
 /*  Awards Component */
 
-const awardsTemplate = document.createElement('template');
+const awardsTemplate = document.createElement("template");
 awardsTemplate.innerHTML = `
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/awards.css">
@@ -302,25 +309,25 @@ awardsTemplate.innerHTML = `
 `;
 
 class Awards extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(awardsTemplate.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(awardsTemplate.content.cloneNode(true));
+    }
 }
 
-window.customElements.define('awards-component', Awards);
+window.customElements.define("awards-component", Awards);
 
 /* blockquote with image */
 const quotes = [
-  'Good security increases shareholder value.',
-  "Corporate trust and reputation are every company's most valuable assets.",
-  "It is much more harder to restore your company's reputation than your website files when it is hacked or defaced. Once lost, trust is very hard to get back.",
-  'I recommend employees to begin taking Security seriously. Otherwise you may be fired for causing some security problems in an organization.',
-  'The main target of security is not only creating rules but also following them.',
+    "Good security increases shareholder value.",
+    "Corporate trust and reputation are every company's most valuable assets.",
+    "It is much more harder to restore your company's reputation than your website files when it is hacked or defaced. Once lost, trust is very hard to get back.",
+    "I recommend employees to begin taking Security seriously. Otherwise you may be fired for causing some security problems in an organization.",
+    "The main target of security is not only creating rules but also following them.",
 ];
 
-const blockquoteWithImage = document.createElement('template');
+const blockquoteWithImage = document.createElement("template");
 blockquoteWithImage.innerHTML = `
   <link rel="stylesheet" href="./css/utilities.css">
   <style>
@@ -386,7 +393,7 @@ blockquoteWithImage.innerHTML = `
       <img src="./assets/misc/img1.jpg" alt="">
       <div class="person-info">
         <p class="name">Samvel Gevorgyan</p>
-        <p class="designation">CEO, Cyber Gates</p>
+        <p class="designation">CEO, The Eye Of Cyber</p>
       </div>
       <blockquote>
         ${quotes[Math.floor(Math.random() * quotes.length)]}
@@ -396,18 +403,18 @@ blockquoteWithImage.innerHTML = `
 `;
 
 class BlockQuote extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(blockquoteWithImage.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(blockquoteWithImage.content.cloneNode(true));
+    }
 }
 
-window.customElements.define('blockquote-with-image', BlockQuote);
+window.customElements.define("blockquote-with-image", BlockQuote);
 
 /* CTA Component */
 
-const ctaTemplate = document.createElement('template');
+const ctaTemplate = document.createElement("template");
 ctaTemplate.innerHTML = `
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -428,7 +435,7 @@ ctaTemplate.innerHTML = `
         <div class="cta">
           <div class="icon"><i class="fab fa-telegram-plane fa-4x"></i></div>
           <h4>Email Us</h4>
-          <a href="#">support@cybergates.org</a>
+          <a href="#">support@theeyeofcyber.org</a>
         </div>
       </div>
     </div>
@@ -436,11 +443,11 @@ ctaTemplate.innerHTML = `
 `;
 
 class Cta extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(ctaTemplate.content.cloneNode(true));
-  }
+    constructor() {
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(ctaTemplate.content.cloneNode(true));
+    }
 }
 
-window.customElements.define('cta-component', Cta);
+window.customElements.define("cta-component", Cta);
