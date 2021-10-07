@@ -114,3 +114,8 @@
   margin-top: 8px;
   color: rgb(255, 157, 0);
 }
+
+.leftCard p,
+.rightCard p {
+  flex-grow: 1;
+}

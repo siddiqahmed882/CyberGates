@@ -55,13 +55,6 @@ navbarTemplate.innerHTML = `
         </li>
         <li class="nav__item">
           <a 
-            href=${currPage === 'news' ? '#' : 'news.html'} 
-            class="nav__link"
-            data-id='news'
-            >News</a>
-          </li>
-        <li class="nav__item">
-          <a 
             href=${currPage === 'customers' ? '#' : 'customers.html'} 
             class="nav__link"
             data-id='customers'
@@ -131,15 +124,6 @@ class Navbar extends HTMLElement {
 window.customElements.define('nav-component', Navbar);
 
 /* Hero Component */
-let backgroundImage;
-switch (currPage) {
-  case 'about':
-    backgroundImage = './assets/about/img1.jpg';
-    break;
-  case 'customers':
-    backgroundImage = './assets/customers/img1.jpg';
-    break;
-}
 const heroTemplate = document.createElement('template');
 heroTemplate.innerHTML = `
   <link rel="stylesheet" href="./css/utilities.css">
@@ -147,10 +131,12 @@ heroTemplate.innerHTML = `
   <style>
     .hero-section{
       background-image: url(${
-        (currPage === 'about' && './assets/about/bg.jpg') ||
-        (currPage === 'services' && './assets/about/bg.jpg') ||
-        (currPage === 'services-for-smes' && './assets/about/bg.jpg.') ||
-        (currPage === 'customers' && './assets/customers/bg.jpg')
+        (currPage === 'about' && './assets/about/hero.jpg') ||
+        (currPage === 'services' && './assets/about/hero.jpg') ||
+        (currPage === 'services-for-smes' && './assets/servicesforSEMS/hero.jpg') ||
+        (currPage === 'customers' && './assets/customers/hero.jpg') ||
+        (currPage === 'contact' && './assets/contact/hero.jpg') ||
+        './assets/index/hero.jpg'
       })
     }
   </style>
@@ -427,7 +413,7 @@ ctaTemplate.innerHTML = `
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/utilities.css">
   <link rel="stylesheet" href="./css/cta-component.css">
-  <section class="cta-section mb-2">
+  <section class="cta-section">
     <div class="container">
       <div class="cta__header mb-2">
         <h4 class="cta__title"><slot name="title" /></h4>

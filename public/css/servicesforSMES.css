@@ -1,64 +1,90 @@
+:root {
+  --table-font: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --table-font: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    --table-font: 0.7rem;
+  }
+}
+
 .subscription {
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    background: rgb(121, 9, 49);
-    background: linear-gradient( 90deg, rgba(121, 9, 49, 1) 35%, rgba(0, 255, 81, 1) 100%);
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  background: rgb(121, 9, 49);
+  background: linear-gradient(90deg, rgba(121, 9, 49, 1) 35%, rgba(0, 255, 81, 1) 100%);
+  overflow: auto;
 }
 
 .servicesContent {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-flow: column wrap;
-    /* justify-items: center; */
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  /* justify-items: center; */
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .servicesContent h2 {
-    font-size: var(--section-title);
-    text-transform: uppercase;
+  font-size: var(--section-title);
+  text-transform: uppercase;
+  line-height: 0.9;
 }
 
 .servicesContent p {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    color: #2e2e2e;
-    font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #2e2e2e;
+  font-size: 1.5rem;
+}
+
+.servicesContent h2:nth-of-type(2) {
+  font-size: var(--section-title--small);
+}
+
+.servicesContent p:first-of-type {
+  margin-bottom: 1rem;
 }
 
 table,
 th,
 td {
-    border-collapse: collapse;
-    border: 1px solid whitesmoke;
-    text-align: center;
-    /* border-radius: 200px; */
+  border-collapse: collapse;
+  border: 1px solid whitesmoke;
+  text-align: center;
+  /* border-radius: 200px; */
 }
 
 table {
-    padding: 20px;
-    font-size: 1.25rem;
-    color: whitesmoke;
+  padding: 20px;
+  font-size: var(table-font, 1.25rem);
+  color: whitesmoke;
 }
 
 th,
 td {
-    padding: 12px 10px;
+  padding: 12px 10px;
 }
 
 .fa-check-circle {
-    color: rgb(117, 184, 18);
-    font-size: 1.5rem;
+  color: rgb(117, 184, 18);
+  font-size: 1.5rem;
 }
 
 .fa-times-circle {
-    color: red;
-    font-size: 1.5rem;
+  color: red;
+  font-size: 1.5rem;
 }

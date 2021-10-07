@@ -1,7 +1,7 @@
 /* Hero */
 .hero-section {
   height: 90vh;
-  background: #333 url(../assets/about/img1.jpg) no-repeat center center / cover;
+  background: #333 url(../assets/web-security/hero.jpg) no-repeat center center / cover;
   background-blend-mode: overlay;
   color: var(--clr-neutral-900);
 }
