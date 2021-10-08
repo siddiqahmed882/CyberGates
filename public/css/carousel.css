@@ -1,121 +1,39 @@
-.testimonial-section {
+.testimonials-section {
   padding: var(--section-padding);
   background: #333 url(../assets/index/img2.jpg) no-repeat center center / cover;
   background-blend-mode: overlay;
 }
 
-.testimonial__title {
+.testimonials__title {
   font-size: var(--section-title);
   margin-bottom: 1.5rem;
+  color: var(--clr-neutral-900);
+  text-align: center;
 }
 
 .testimonial {
-  width: min(70vw, 600px);
-  min-height: 400px !important;
+  width: min(85vw, 350px);
   margin: 0 auto;
-  /* background: red; */
+  margin-right: 1rem;
 }
 
-.card .rightCard img {
+.testimonial img {
   width: 180px;
   height: 180px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
-.card h2 {
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  font-size: var(--section-title);
-  grid-column: 1/-1;
-}
-
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.leftCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.leftCard p {
-  color: white;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.card .leftCard img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-}
-
-.leftCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.leftCard p {
-  color: white;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.leftCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.leftCard p {
-  color: white;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.leftCard h3 {
+.testimonial h3 {
   font-size: 2rem;
   margin-top: 8px;
   color: rgb(255, 157, 0);
-}
-
-.card .rightCard img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-}
-
-.rightCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.rightCard p {
-  color: white;
-  font-size: 1.3rem;
   text-align: center;
 }
 
-.rightCard h3 {
-  font-size: 2rem;
-  margin-top: 8px;
-  color: rgb(255, 157, 0);
-}
-
-.leftCard p,
-.rightCard p {
+.testimonial p {
+  color: white;
+  font-size: 1.125rem;
+  text-align: center;
   flex-grow: 1;
 }
