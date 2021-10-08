@@ -1,120 +1,129 @@
 :root {
-  --clr-neutral-900: hsl(0, 0%, 96%);
-  --clr-primary-700: hsl(120, 100%, 35%);
-  --clr-primary-600: hsl(120, 100%, 30%);
-  --clr-primary-500: hsl(120, 100%, 25%);
-  --clr-primary-400: hsl(120, 100%, 20%);
-  --clr-primary-300: hsl(120, 100%, 15%);
-  --clr-primary-200: hsl(120, 100%, 10%);
-  --hero-title: clamp(4rem, 1.75rem + 2vw, 6rem);
-  --section-padding: min(3rem, 10vw) 0;
-  --section-title: clamp(3rem, 1rem + 1vw, 5rem);
-  --section-title--small: clamp(2.25rem, +3vw, 4rem);
-  --section-lead: 1.125rem;
-  --card-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
-  font-size: 1.05rem;
+    --clr-neutral-900: hsl(0, 0%, 96%);
+    --clr-primary-700: hsl(120, 100%, 35%);
+    --clr-primary-600: hsl(120, 100%, 30%);
+    --clr-primary-500: hsl(120, 100%, 25%);
+    --clr-primary-400: hsl(120, 100%, 20%);
+    --clr-primary-300: hsl(120, 100%, 15%);
+    --clr-primary-200: hsl(120, 100%, 10%);
+    --hero-title: clamp(3.5rem, 2vw, 6rem);
+    --section-padding: min(3rem, 10vw) 0;
+    --section-title: clamp(3rem, 1rem + 1vw, 5rem);
+    --section-title--small: clamp(2.25rem, +3vw, 4rem);
+    --section-lead: 1.125rem;
+    --card-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+    font-size: 1.05rem;
 }
 
 @media (max-width: 1000px) {
-  :root {
-    font-size: 1rem;
-  }
+     :root {
+        font-size: 1rem;
+    }
 }
+
+@media (max-width: 400px) {
+     :root {
+        font-size: 0.8rem;
+    }
+}
+
 
 /* CSS Reset */
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 /* Core Styling */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  color: #2e2e2e;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #2e2e2e;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.3;
+    line-height: 1.3;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 button {
-  outline: none;
-  border: none;
-  background: transparent;
-  font-size: inherit;
-  font-family: inherit;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 label,
-input:not([type='submit']),
+input:not([type="submit"]),
 textarea {
-  display: block;
+    display: block;
 }
 
-input:not([type='submit']),
+input:not([type="submit"]),
 textarea {
-  width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
 }
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
+
 
 /* Utilities */
 
 .container {
-  width: min(1170px, 90vw);
-  margin: 0 auto;
-  padding: 0 0.25rem;
+    width: min(1170px, 90vw);
+    margin: 0 auto;
+    padding: 0 0.25rem;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  border: none;
-  outline: none;
-  user-select: none;
-  cursor: pointer;
-  font-size: inherit;
-  border-radius: 0.15rem;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    font-size: inherit;
+    border-radius: 0.15rem;
 }
 
-.flow > *:not(:last-child) {
-  margin-bottom: var(--flow-space, 1rem);
+.flow>*:not(:last-child) {
+    margin-bottom: var(--flow-space, 1rem);
 }
 
 .mb-1 {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .mb-2 {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .mb-3 {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
