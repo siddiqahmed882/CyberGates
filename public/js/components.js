@@ -173,6 +173,7 @@ footerTemplate.innerHTML = `
           <h3 class="column__title mb-1">Subscribe</h3>
           <p>Receive the latest security stories, trends and insights directly in your inbox each month.</p>
           <form class="subscribe-newsletter" name="subscription" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="subscription" />
             <input type="email" name="email" id="email" placeholder="Email">
             <input class="btn" type="submit" value="Submit">
           </form>
