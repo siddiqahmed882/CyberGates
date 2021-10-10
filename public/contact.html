@@ -70,6 +70,12 @@
   <!-- footer -->
   <footer-component></footer-component>
 
+  <!-- additional markup for subscription form submission because it it js rendered form-->
+  <form class="subscribe-newsletter" name="subscription" method="POST" data-netlify="true" hidden>
+    <input type="email" name="email" id="email" placeholder="Email">
+    <input class="btn" type="submit" value="Submit">
+  </form>
+
   <!-- template -->
   <template data-contact-info>
     <ul class="contact__details">
